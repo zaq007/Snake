@@ -108,7 +108,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Game.cs" />
+    <Compile Include="Interfaces\IDrawable.cs" />
+    <Compile Include="Interfaces\IUpdatable.cs" />
+    <Compile Include="Handlers\KeyboardEventArgs.cs" />
+    <Compile Include="Handlers\KeyboardHandler.cs" />
     <Compile Include="Misc\GameState.cs" />
+    <Compile Include="Misc\Map.cs" />
     <Compile Include="Objects\GameObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
