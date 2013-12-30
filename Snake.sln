@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snake", "Snake\Snake\Snake.csproj", "{3ACA726E-CEDB-4762-9056-5A8654902E2D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{76649115-5B9A-4DC2-AC14-2B168044D1B9} = {76649115-5B9A-4DC2-AC14-2B168044D1B9}
+	EndProjectSection
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "SnakeContent", "Snake\SnakeContent\SnakeContent.contentproj", "{7067BC15-78EE-43B2-9CE6-3F3C6D71D6F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnakeGame", "SnakeGame\SnakeGame\SnakeGame.csproj", "{76649115-5B9A-4DC2-AC14-2B168044D1B9}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "SnakeGameContent", "SnakeGame\SnakeGameContent\SnakeGameContent.contentproj", "{4512F56A-8449-46B5-8123-987C0D86FCC6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3ACA726E-CEDB-4762-9056-5A8654902E2D}.Debug|x86.ActiveCfg = Debug|x86
+		{3ACA726E-CEDB-4762-9056-5A8654902E2D}.Debug|x86.Build.0 = Debug|x86
+		{3ACA726E-CEDB-4762-9056-5A8654902E2D}.Release|x86.ActiveCfg = Release|x86
+		{3ACA726E-CEDB-4762-9056-5A8654902E2D}.Release|x86.Build.0 = Release|x86
+		{7067BC15-78EE-43B2-9CE6-3F3C6D71D6F5}.Debug|x86.ActiveCfg = Debug|x86
+		{7067BC15-78EE-43B2-9CE6-3F3C6D71D6F5}.Release|x86.ActiveCfg = Release|x86
+		{76649115-5B9A-4DC2-AC14-2B168044D1B9}.Debug|x86.ActiveCfg = Debug|x86
+		{76649115-5B9A-4DC2-AC14-2B168044D1B9}.Debug|x86.Build.0 = Debug|x86
+		{76649115-5B9A-4DC2-AC14-2B168044D1B9}.Release|x86.ActiveCfg = Release|x86
+		{76649115-5B9A-4DC2-AC14-2B168044D1B9}.Release|x86.Build.0 = Release|x86
+		{4512F56A-8449-46B5-8123-987C0D86FCC6}.Debug|x86.ActiveCfg = Debug|x86
+		{4512F56A-8449-46B5-8123-987C0D86FCC6}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
