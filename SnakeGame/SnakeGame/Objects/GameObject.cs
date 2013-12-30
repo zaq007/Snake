@@ -24,8 +24,10 @@ namespace SnakeGame.Objects
         public virtual void Update(GameTime gameTime)
         {        }
 
-        public virtual void Draw(GameTime gameTime)
-        {        }
+        public virtual void Draw(SpriteBatch spriteBatch)
+        {
+            spriteBatch.Draw(Texture, Position, Color.White);
+        }
 
     }
 }
