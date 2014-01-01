@@ -9,7 +9,7 @@ namespace SnakeGame.Misc
     {
         static public string State { get; set; }
 
-        static public GameState()
+        static GameState()
         {
             State = "OK";
         }

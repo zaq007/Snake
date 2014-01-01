@@ -5,23 +5,17 @@ using System.Text;
 
 namespace SnakeGame.Misc
 {
-    class Map
+    static class Map
     {
-        enum MapState
+        static public int X { get; set; }
+        static public int Y { get; set; }
+        static public int Size { get;set; }
+
+        static Map()
         {
-            None = 0,
-            Snake,
-            Eat            
+            X = 20;
+            Y = 20;
+            Size = 16;
         }
-        public MapState[, ] Map { get; set; }
-        public double Size { get; set; }
-
-        public Map(int x, int y, double a)
-        {
-            Map = new MapState[x, y];
-            Size = a;
-        }
-
-
     }
 }

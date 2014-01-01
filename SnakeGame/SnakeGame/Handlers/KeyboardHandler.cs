@@ -4,25 +4,26 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework;
+using SnakeGame.Interfaces;
 
 namespace SnakeGame.Handlers
 {
-    class KeyboardHandler : IUpdatable
+    static class KeyboardHandler
     {
-        KeyboardState previous;
+        static KeyboardState previous;
 
-        public event EventHandler<KeyboardEventArgs> OnPress = delegate { };
+        static public event EventHandler<KeyboardEventArgs> OnPress = delegate { };
 
-        public KeyboardHandler()
+        static KeyboardHandler()
         {
             previous = Keyboard.GetState();
         }
         
-        public void Update(GameTime gameTime)
+        static public void Update(GameTime gameTime)
         {
             KeyboardState current = Keyboard.GetState();
             List<Keys> keys = current.GetPressedKeys().Where(x => previous.IsKeyUp(x)).ToList<Keys>();
-            OnPress(this, new KeyboardEventArgs(keys));
+            OnPress(null, new KeyboardEventArgs(keys));
             previous = current;
         }
     }

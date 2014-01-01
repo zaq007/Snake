@@ -25,6 +25,7 @@ namespace Snake
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            this.IsMouseVisible = true;
         }
 
         /// <summary>
@@ -36,7 +37,7 @@ namespace Snake
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
+            SnakeGame.Misc.TextureLoader.Initialize(this.Content);
             base.Initialize();
         }
 
@@ -90,9 +91,10 @@ namespace Snake
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
+            spriteBatch.Begin();
             game.Draw(spriteBatch);
             // TODO: Add your drawing code here
-
+            spriteBatch.End();
             base.Draw(gameTime);
         }
     }

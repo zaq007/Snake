@@ -6,7 +6,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace SnakeGame.Handlers
 {
-    class KeyboardEventArgs
+    class KeyboardEventArgs : EventArgs
     {
         public List<Keys> Keys { get; set; }
 

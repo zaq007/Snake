@@ -9,6 +9,6 @@ namespace SnakeGame.Interfaces
 {
     interface IDrawable
     {
-        public abstract void Draw(SpriteBatch spriteBatch);
+        void Draw(SpriteBatch spriteBatch);
     }
 }

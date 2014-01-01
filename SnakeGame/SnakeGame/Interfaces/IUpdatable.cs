@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
 
-namespace SnakeGame.Handlers
+namespace SnakeGame.Interfaces
 {
     interface IUpdatable
     {
-        public abstract void Update(GameTime gameTime);
+        void Update(GameTime gameTime);
     }
 }
