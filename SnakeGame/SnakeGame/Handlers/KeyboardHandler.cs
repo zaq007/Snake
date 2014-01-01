@@ -17,12 +17,13 @@ namespace SnakeGame.Handlers
         {
             previous = Keyboard.GetState();
         }
-
+        
         public void Update(GameTime gameTime)
         {
             KeyboardState current = Keyboard.GetState();
             List<Keys> keys = current.GetPressedKeys().Where(x => previous.IsKeyUp(x)).ToList<Keys>();
             OnPress(this, new KeyboardEventArgs(keys));
+            previous = current;
         }
     }
 }
