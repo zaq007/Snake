@@ -29,7 +29,8 @@ namespace SnakeGame.AI
                 map[(int)a.Position.X / Map.Size, (int)a.Position.Y / Map.Size] = 1;
             }
             List<Point> path = PathFinder.FindPath(map, Snake.Head, finish);
-            Snake.Speed = new Vector2(path[1].X - Snake.Head.X, path[1].Y - Snake.Head.Y);
+            if(path != null)
+                Snake.Speed = new Vector2(path[1].X - Snake.Head.X, path[1].Y - Snake.Head.Y);
         }
 
     }

@@ -22,7 +22,7 @@ namespace SnakeGame.Objects
         {
             Head = new Point(2, 0);
             Speed = new Vector2(1, 0);
-            Time = new TimeSpan(0, 0, 1);
+            Time = new TimeSpan(0, 0, 0, 0, 200);
             Nodes = new List<SnakeNode>();
             Nodes.Add(new SnakeNode(TextureLoader.SnakeNode, new Vector2(2*Map.Size, 0)));
             Nodes.Add(new SnakeNode(TextureLoader.SnakeNode, new Vector2(1*Map.Size, 0)));
@@ -84,7 +84,7 @@ namespace SnakeGame.Objects
                     nextX = x;
                     nextY = y;
                 }
-                Time = new TimeSpan(0, 0, 1);
+                Time = new TimeSpan(0, 0, 0, 0, 200);
                 OnUpdate(this, null);
             }
         }

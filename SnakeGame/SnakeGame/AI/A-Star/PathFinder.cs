@@ -88,7 +88,7 @@ namespace SnakeGame.AI.A_Star
                 if (point.Y < 0 || point.Y >= field.GetLength(1))
                     continue;
                 // Проверяем, что по клетке можно ходить.
-                if ((field[point.X, point.Y] != 0) && (field[point.X, point.Y] != 1))
+                if (field[point.X, point.Y] == 1)
                     continue;
                 // Заполняем данные для точки маршрута.
                 var neighbourNode = new PathNode()
