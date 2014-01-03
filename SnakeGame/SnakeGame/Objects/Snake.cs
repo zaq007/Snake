@@ -63,7 +63,14 @@ namespace SnakeGame.Objects
                     ObjectContainer.Remove(eat);
                     return;
                 }
-                    
+                for (int i = 1; i < Nodes.Count; i++)
+                {
+                    if (new Rectangle((int)Nodes[i].Position.X, (int)Nodes[i].Position.Y, Map.Size, Map.Size).Intersects(new Rectangle(nextX * Map.Size, nextY * Map.Size, Map.Size, Map.Size)))
+                    {
+                        GameState.State = "Dead";
+                        return;
+                    }
+                }  
                 for (int i = 0; i < Nodes.Count; i++)
                 {
                     x = (int)Nodes[i].Position.X/Map.Size;
