@@ -110,6 +110,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AI\A-Star\PathFinder.cs" />
+    <Compile Include="AI\A-Star\PathNode.cs" />
     <Compile Include="AI\AIController.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="Handlers\EatController.cs" />

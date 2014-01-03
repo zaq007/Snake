@@ -26,6 +26,11 @@ namespace SnakeGame.Objects
             Objects.Add(go);
         }
 
+        public static void Insert(int index, GameObject go)
+        {
+            Objects.Insert(index, go);
+        }
+
         public static void Remove(GameObject go)
         {
             Objects.Remove(go);

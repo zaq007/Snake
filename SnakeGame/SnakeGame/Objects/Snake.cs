@@ -11,9 +11,12 @@ namespace SnakeGame.Objects
 {
     class Snake : GameObject
     {
+        public event EventHandler OnUpdate = delegate { };
+        public event EventHandler OnEat = delegate { };
+
         public Point Head { get; set; }
         TimeSpan Time;
-        List<SnakeNode> Nodes;
+        public List<SnakeNode> Nodes { get; set; }
 
         public Snake() : base()
         {
@@ -61,6 +64,8 @@ namespace SnakeGame.Objects
                 {
                     Nodes.Insert(0, new SnakeNode(TextureLoader.SnakeNode, eatPosition));
                     ObjectContainer.Remove(eat);
+                    OnEat(this, null);
+                    OnUpdate(this, null);
                     return;
                 }
                     
@@ -73,6 +78,7 @@ namespace SnakeGame.Objects
                     nextY = y;
                 }
                 Time = new TimeSpan(0, 0, 1);
+                OnUpdate(this, null);
             }
         }
 
