@@ -26,6 +26,9 @@ namespace Snake
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
+            graphics.PreferredBackBufferWidth = 320;
+            graphics.PreferredBackBufferHeight = 320;
+            graphics.ApplyChanges();
         }
 
         /// <summary>
