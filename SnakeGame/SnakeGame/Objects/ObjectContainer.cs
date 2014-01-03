@@ -33,8 +33,8 @@ namespace SnakeGame.Objects
 
         public static void Update(GameTime gameTime)
         {
-            foreach (var a in Objects)
-                a.Update(gameTime);
+            for (int i = 0; i < Objects.Count; i++)
+                Objects[i].Update(gameTime);
         }
 
         public static void Draw(SpriteBatch spriteBatch)

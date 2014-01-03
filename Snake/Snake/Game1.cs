@@ -25,7 +25,7 @@ namespace Snake
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            this.IsMouseVisible = true;
+            IsMouseVisible = true;
         }
 
         /// <summary>

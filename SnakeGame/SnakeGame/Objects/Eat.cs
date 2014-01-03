@@ -15,7 +15,7 @@ namespace SnakeGame.Objects
             Tag = "Eat";
         }
 
-        public void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
 
         }

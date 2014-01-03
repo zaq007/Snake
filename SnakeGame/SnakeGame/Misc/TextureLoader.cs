@@ -27,5 +27,16 @@ namespace SnakeGame.Misc
             }
         }
 
+        static Texture2D eat;
+        public static Texture2D Eat
+        {
+            get
+            {
+                if (eat == null)
+                    eat = content.Load<Texture2D>("SnakeNode");
+                return eat;
+            }
+        }
+
     }
 }

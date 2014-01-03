@@ -55,6 +55,15 @@ namespace SnakeGame.Objects
                     GameState.State = "DEAD";
                     return;
                 }
+                GameObject eat = ObjectContainer.GetElementsByTag("Eat").ToList<GameObject>()[0];
+                Vector2 eatPosition = eat.Position;
+                if (new Rectangle((int)eatPosition.X, (int)eatPosition.Y, Map.Size, Map.Size).Intersects(new Rectangle(nextX * Map.Size, nextY * Map.Size, Map.Size, Map.Size)))
+                {
+                    Nodes.Insert(0, new SnakeNode(TextureLoader.SnakeNode, eatPosition));
+                    ObjectContainer.Remove(eat);
+                    return;
+                }
+                    
                 for (int i = 0; i < Nodes.Count; i++)
                 {
                     x = (int)Nodes[i].Position.X/Map.Size;

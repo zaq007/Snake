@@ -12,13 +12,17 @@ namespace SnakeGame
 {
     public class Game
     {
+        EatController eatController;
+
         public Game()
         {
             ObjectContainer.Add(new Snake());
+            eatController = new EatController();
         }
 
         public string Update(GameTime gameTime)
         {
+            eatController.Update(gameTime);
             KeyboardHandler.Update(gameTime);
             ObjectContainer.Update(gameTime);
             return GameState.State;
